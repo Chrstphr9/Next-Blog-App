@@ -12,7 +12,11 @@ const Header = () => {
         </div>
         <div className='text-center my-8'>
         <h1 className='text-3xl sm:text-5xl font-medium text-primary'>Latest Blogs</h1> 
-        <p className='mt-10 text-primary'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolores fugit, accusantium dignissimos quis nulla.</p>
+        <p className='mt-10 text-primary max-w-[740px] m-auto text-xs sm:text-base'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolores fugit, accusantium dignissimos quis nulla.</p>
+        <form className='flex justify-between max-w-[500px] scale-75 sm:scale-100 mx-auto mt-10 border border-primary' action="">
+           <input type="email" placeholder='Enter Your Email' className='pl-4 outline-none'/> 
+           <button className='border-1 border-primary py-4 px-4 sm:px-8 active:bg-gray-600 active:text-white'>Subscribe</button>
+        </form>
         </div>    
     </div>
   )
