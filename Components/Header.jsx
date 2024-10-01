@@ -2,6 +2,8 @@ import { assets } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
 
+//#00204A
+
 const Header = () => {
   return (
     <div className='py-5 px-5 md:px-12 lg:px-28'>
