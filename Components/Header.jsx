@@ -8,9 +8,12 @@ const Header = () => {
         <div className='flex justify-between items-center'>
             <Image src={assets.logo} width={180} alt='' className='w-[130px] sm:w-auto' />
             <button className='flex items-center gap-2 font-medium py-1 px-3 sm:py-3 sm:px-6 
-            border border-solid border-primary shadow-[-7px_7px_0px_primary]'> Get Started <Image src={assets.arrow}/></button>
+            border border-solid border-primary shadow-[-7px_7px_0px_#005792]'> Get Started <Image src={assets.arrow}/></button>
         </div>
-        
+        <div className='text-center my-8'>
+        <h1 className='text-3xl sm:text-5xl font-medium text-primary'>Latest Blogs</h1> 
+        <p className='mt-10 text-primary'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam dolores fugit, accusantium dignissimos quis nulla.</p>
+        </div>    
     </div>
   )
 }

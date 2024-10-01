@@ -20,7 +20,7 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: '#00204A',
-        secndary: '#005792',
+        secondary: '#005792',
         tertiary: '#00BBF0',
         off: '#EFFBFF'
       },
