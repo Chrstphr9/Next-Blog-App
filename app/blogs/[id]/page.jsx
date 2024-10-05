@@ -1,5 +1,8 @@
 'use client'
-import { blog_data } from '@/assets/assets'
+import { assets, blog_data } from '@/assets/assets'
+import Footer from '@/Components/Footer'
+import Image from 'next/image'
+import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
 const Page = ({params}) => {
@@ -23,10 +26,48 @@ const Page = ({params}) => {
     }, [])
     
 
-  return (
-    <div>
-      {params.id}
+  return ( data?<>
+    <div className='bg-gray-200 py-5 px-5 md:px-12 lg:px-28'>
+        <div className='flex justify-between items-center'>
+          <Link href='/'>
+          <Image src={assets.logo} width={100} alt='' className='w-[130px] sm:w-auto' />
+          </Link >
+          <button className='flex items-center gap-2 font-medium py-1 px-3 sm:py-3 sm:px-6 border border-prishdw shadow-[-7px_7px_0px_#00204A] text-pritxt'>
+            Get Started <Image src={assets.arrow} alt='' />
+            </button> 
+        </div>
+        <div className='text-center my-24'>
+          <h1 className="text-2xl sm:text-5xl font-bold max-w-[700px] mx-auto text-pritxt">{data.title}</h1>
+          <Image className='mx-auto mt-6 border border-white rounded-full' src={data.author_img} width={60} height={60} alt=''/>
+           <p className='mt-1 pb-2 text-lg max-w-[720px] mx-auto text-pritxt'>{data.author}</p>
+        </div>
     </div>
+    <div className='mx-5 max-w-[800px] md:mx-auto mt-[-100px] mb-10'>
+        <Image className='border-4 border-prishdw' src={data.image} width={1280} height={720} alt=''/>
+        <h1 className='my-8 text-[26px] font-semibold text-pritxt'>Introduction:</h1>
+        <p className='text-pritxt'>{data.description}</p>
+        <h3 className='my-5 text-[18px] font-semibold text-pritxt'>Step 1: Self-Refllection and Goal</h3>
+        <p className='my-3 text-pritxt'>Before you can manage your lifestyle, you must have a clear understanding of what you want to achieve. Start by reflecting on your values, aspiration, and long-term goals.</p>
+        <p className='my-3 text-pritxt'>Before you can manage your lifestyle, you must have a clear understanding of what you want to achieve. Start by reflecting on your values, aspiration, and long-term goals.</p>
+        <h3 className='my-5 text-[18px] font-semibold text-pritxt'>Step 2: Self-Refllection and Goal</h3>
+        <p className='my-3 text-pritxt'>Before you can manage your lifestyle, you must have a clear understanding of what you want to achieve. Start by reflecting on your values, aspiration, and long-term goals.</p>
+        <p className='my-3 text-pritxt'>Before you can manage your lifestyle, you must have a clear understanding of what you want to achieve. Start by reflecting on your values, aspiration, and long-term goals.</p>
+        <h3 className='my-5 text-[18px] font-semibold text-pritxt'>Step 3: Self-Refllection and Goal</h3>
+        <p className='my-3 text-pritxt'>Before you can manage your lifestyle, you must have a clear understanding of what you want to achieve. Start by reflecting on your values, aspiration, and long-term goals.</p>
+        <p className='my-3 text-pritxt'>Before you can manage your lifestyle, you must have a clear understanding of what you want to achieve. Start by reflecting on your values, aspiration, and long-term goals.</p>
+        <h3 className='my-5 text-[18px] font-semibold text-pritxt'>Conclusion:</h3>
+        <p className='my-3 text-pritxt'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam totam non dolorum excepturi doloremque, repellat aut, nisi ipsam libero voluptatum est molestiae dignissimos quibusdam illo quis rerum expedita explicabo? Natus odit cupiditate optio aliquam totam.</p>
+        <div>
+          <p className='text-pritxt font font-semibold my-4'> Share this article on social media</p>
+          <div className='flex'>
+              <Image src={assets.facebook_icon} width={50} alt=''/>
+              <Image src={assets.twitter_icon} width={50} alt=''/>
+              <Image src={assets.googleplus_icon} width={50} alt=''/>
+          </div>
+        </div>
+    </div>
+    <Footer />
+    </>:<></>
   );
 }
 
